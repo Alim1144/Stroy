@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель СтройМир</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-hammer"></i>
+                    <span>СтройМир</span>
+                </div>
+                <p class="logo-subtitle">Админ-панель</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Панель управления</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-section="services">
+                            <i class="fas fa-tools"></i>
+                            <span>Услуги</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link" data-section="portfolio">
+                            <i class="fas fa-images"></i>
+                            <span>Портфолио</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacts" class="nav-link" data-section="contacts">
+                            <i class="fas fa-address-book"></i>
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Настройки</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#messages" class="nav-link" data-section="messages">
+                            <i class="fas fa-envelope"></i>
+                            <span>Сообщения</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="../index.html" class="view-site-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Посмотреть сайт</span>
+                </a>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Выйти</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">Панель управления</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <img src="https://via.placeholder.com/40" alt="Admin" class="user-avatar">
+                        <span class="user-name">Администратор</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section active">
+                    <div class="dashboard-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">1,234</h3>
+                                <p class="stat-label">Просмотры сегодня</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">12</h3>
+                                <p class="stat-label">Новые заявки</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">6</h3>
+                                <p class="stat-label">Активные услуги</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">24</h3>
+                                <p class="stat-label">Работы в портфолио</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <div class="recent-activity">
+                            <h2>Последние заявки</h2>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Иван Петров</h4>
+                                        <p>Строительство дома 150м²</p>
+                                        <span class="activity-time">2 часа назад</span>
+                                    </div>
+                                    <div class="activity-status new">Новая</div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Мария Сидорова</h4>
+                                        <p>Ремонт квартиры</p>
+                                        <span class="activity-time">5 часов назад</span>
+                                    </div>
+                                    <div class="activity-status pending">В обработке</div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Алексей Козлов</h4>
+                                        <p>Покраска фасада</p>
+                                        <span class="activity-time">1 день назад</span>
+                                    </div>
+                                    <div class="activity-status completed">Завершена</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section id="services" class="content-section">
+                    <div class="section-header">
+                        <h2>Управление услугами</h2>
+                        <button class="btn btn-primary" id="addServiceBtn">
+                            <i class="fas fa-plus"></i>
+                            Добавить услугу
+                        </button>
+                    </div>
+                    
+                    <div class="services-grid" id="servicesGrid">
+                        <!-- Services will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Portfolio Section -->
+                <section id="portfolio" class="content-section">
+                    <div class="section-header">
+                        <h2>Управление портфолио</h2>
+                        <button class="btn btn-primary" id="addPortfolioBtn">
+                            <i class="fas fa-plus"></i>
+                            Добавить работу
+                        </button>
+                    </div>
+                    
+                    <div class="portfolio-grid" id="portfolioGrid">
+                        <!-- Portfolio items will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Contacts Section -->
+                <section id="contacts" class="content-section">
+                    <div class="section-header">
+                        <h2>Контактная информация</h2>
+                        <button class="btn btn-primary" id="saveContactsBtn">
+                            <i class="fas fa-save"></i>
+                            Сохранить изменения
+                        </button>
+                    </div>
+                    
+                    <div class="contacts-form">
+                        <div class="form-group">
+                            <label for="contactPhone">Телефон</label>
+                            <input type="tel" id="contactPhone" value="+7 (999) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" value="info@stroymir.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactAddress">Адрес</label>
+                            <input type="text" id="contactAddress" value="г. Москва, ул. Строительная, 1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSchedule">Режим работы</label>
+                            <textarea id="contactSchedule" rows="3">Пн-Пт: 8:00 - 18:00
+Сб: 9:00 - 15:00</textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings" class="content-section">
+                    <div class="section-header">
+                        <h2>Настройки сайта</h2>
+                    </div>
+                    
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label for="siteTitle">Название сайта</label>
+                            <input type="text" id="siteTitle" value="СтройМир - Строительные услуги под ключ">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="siteDescription">Описание сайта</label>
+                            <textarea id="siteDescription" rows="3">Профессиональные строительные услуги: облицовка, строительство домов, покраска и многое другое. Качественно и в срок!</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="primaryColor">Основной цвет</label>
+                            <input type="color" id="primaryColor" value="#2563eb">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="accentColor">Акцентный цвет</label>
+                            <input type="color" id="accentColor" value="#fbbf24">
+                        </div>
+                        
+                        <button class="btn btn-primary" id="saveSettingsBtn">
+                            <i class="fas fa-save"></i>
+                            Сохранить настройки
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Messages Section -->
+                <section id="messages" class="content-section">
+                    <div class="section-header">
+                        <h2>Сообщения с сайта</h2>
+                        <button class="btn btn-secondary" id="markAllReadBtn">
+                            <i class="fas fa-check-double"></i>
+                            Отметить все как прочитанные
+                        </button>
+                    </div>
+                    
+                    <div class="messages-list" id="messagesList">
+                        <!-- Messages will be loaded here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="serviceModalTitle">Добавить услугу</h3>
+                <button class="modal-close" id="closeServiceModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <label for="serviceName">Название услуги</label>
+                        <input type="text" id="serviceName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceIcon">Иконка</label>
+                        <select id="serviceIcon">
+                            <option value="fas fa-home">Дом</option>
+                            <option value="fas fa-paint-roller">Покраска</option>
+                            <option value="fas fa-brush">Кисть</option>
+                            <option value="fas fa-tools">Инструменты</option>
+                            <option value="fas fa-layer-group">Слои</option>
+                            <option value="fas fa-truck">Грузовик</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceDescription">Описание</label>
+                        <textarea id="serviceDescription" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceFeatures">Особенности (каждая с новой строки)</label>
+                        <textarea id="serviceFeatures" rows="4" placeholder="Проектирование&#10;Фундамент&#10;Стены и крыша&#10;Отделка"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelServiceBtn">Отмена</button>
+                <button class="btn btn-primary" id="saveServiceBtn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="portfolioModalTitle">Добавить работу</h3>
+                <button class="modal-close" id="closePortfolioModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="portfolioForm">
+                    <div class="form-group">
+                        <label for="portfolioTitle">Название работы</label>
+                        <input type="text" id="portfolioTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolioDescription">Описание</label>
+                        <textarea id="portfolioDescription" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolioImage">Изображение</label>
+                        <input type="file" id="portfolioImage" accept="image/*">
+                        <div class="file-upload-preview" id="imagePreview"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolioCategory">Категория</label>
+                        <select id="portfolioCategory">
+                            <option value="construction">Строительство</option>
+                            <option value="finishing">Отделка</option>
+                            <option value="painting">Покраска</option>
+                            <option value="repair">Ремонт</option>
+                            <option value="facade">Фасад</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelPortfolioBtn">Отмена</button>
+                <button class="btn btn-primary" id="savePortfolioBtn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 
